@@ -1,0 +1,481 @@
+:root{
+    --box-color: #93A3BC;
+    --button-color: #13293D;
+    --background-color: #FFFBDB;
+    --border-thickness: 8px;
+    --main-radius: 2rem;
+    --main-padding: 1.5vw;
+    --button-padding: 1vw;
+    --button-radius: 1.5rem;
+    --button-font: 110%;
+    --biggest-text:200%;
+    --big-text:150%;
+    --second-big-text:125%;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: clamp(.01rem, 1vw + 1vh, 1.5rem);
+    color: var(--button-color);
+    background-color: var(--background-color);
+}
+a{
+    text-decoration: none;
+    color: var(--background-color);
+}
+.container{
+    
+    display: grid;
+
+    row-gap: 3vh;
+    column-gap: 5vw;
+    height: 97vh;
+    padding-bottom:1vh;
+    margin-bottom: 1vh;
+
+    /* Styling */
+    background:none;
+}
+
+.bigger{
+    font-size: var(--second-big-text);
+}
+.biggest{
+    font-size: var(--biggest-text);
+}
+.contrast{
+    color: var(--background-color);
+    background-color: var(--button-color);
+
+    border-radius: var(--main-radius);
+    /* padding: var(--main-padding); */
+    text-align: center;
+    align-content: center;
+}
+.textbox{
+    background-color: var(--box-color);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    align-content: center;
+    text-align: center;
+    border: var(--button-color) var(--border-thickness) solid;
+}
+.nav-button{
+    font-size: var(--button-font);
+    border-radius: var(--button-radius);
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    flex-basis: 15%;
+}
+
+/* --------------- Landing Page --------------- */
+
+#landing-page{
+
+    grid-template-areas:
+    "nav nav nav nav nav nav"
+    ". headshot headshot about-header about-header ."
+    ". headshot headshot about-text about-text ."
+    ". name name about-text about-text ."
+    ;
+    
+    grid-template-columns: 0.001fr 1fr 1fr 1fr 1fr 0.001fr;
+    grid-template-rows: 1.2fr 1.2fr 2.5fr 0.8fr;
+
+}
+nav{
+    grid-area:nav;
+
+    /* Styling */
+
+    display: flex;
+    align-content: center;
+}
+#nav-name{
+    flex-basis: 45%;
+
+    text-align: center;
+    align-content: center;
+    font-size: 120%;
+}
+#hamburger-button{
+    display: none;
+}
+#headshot{
+    grid-area:headshot;
+
+    /* Styling */
+    background: none;
+    padding: var(--main-padding);
+    padding-top: 0%;
+    align-content: center;
+}
+#headshot img{
+    width: clamp(10vh, 20vh + 10vw, 40vh);
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: var(--main-radius);
+}
+#about-header{
+    grid-area:about-header;
+
+    /* Styling */
+    font-size: var(--biggest-text);
+}
+#about-text{
+    grid-area: about-text;
+    align-content: center;
+    line-height: 150%;
+}
+#name{
+    grid-area:name;
+    align-content: center;
+}
+#p1{
+    font-size: var(--biggest-text);
+    padding: 3px;
+}
+#p2{
+    font-size: var(--second-big-text);
+    padding:3px;
+}
+
+/* --------------- End Landing Page --------------- */
+
+
+
+/* --------------- Project Section ---------------- */
+
+#project-page{
+    grid-template-areas:
+    "project-section-header project-section-header project-section-header project-section-header project-section-header"
+    ". project1-image project2-image project3-image ."
+    ". project1-text project2-text project3-text ."
+    ;
+
+    grid-template-columns: 0.001fr 10fr 10fr 10fr 0.001fr;
+    grid-template-rows: 0.7fr 1.6fr 2.4fr;
+}
+
+#project-section-header{
+    grid-area: project-section-header;
+
+    font-size: var(--biggest-text);
+}
+#project1-image{
+    grid-area: project1-image;
+    align-content: center;
+}
+#project2-image{
+    grid-area: project2-image;
+    align-content: center;
+}
+#project3-image{
+    grid-area: project3-image;
+    align-content: center;
+}
+#project1-image img{
+    width: 100%;
+    border-radius: var(--main-radius);
+    
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#project2-image img{
+    width: 100%;
+    border-radius: var(--main-radius);
+    
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#project3-image img{
+    width: 100%;
+    border-radius: var(--main-radius);
+    
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#project1-text{
+    grid-area:project1-text;
+}
+#project2-text{
+    grid-area: project2-text;
+}
+#project3-text{
+    grid-area: project3-text;
+}
+
+/* --------------- End Project Section --------------- */
+
+
+
+/* --------------- Education Section ---------------*/
+
+#education-page{
+    grid-template-areas:
+    "education-section-header education-section-header education-section-header education-section-header"
+    ". midedu-image midedu-text ."
+    ". svsuedu-image svsuedu-text ."
+    ;
+
+    grid-template-columns: 0.001fr 1fr 3fr 0.001fr;
+    grid-template-rows: 0.75fr 2fr 2fr;
+}
+
+#education-section-header{
+    grid-area: education-section-header;
+    
+    font-size: var(--biggest-text);
+}
+#midedu-image{
+    grid-area: midedu-image;
+    align-content: center;
+    border-radius: var(--main-radius);
+    border: solid var(--button-color) var(--border-thickness);
+}
+#midedu-image img{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#midedu-text{
+    grid-area: midedu-text;
+    font-size: var(--second-big-text);
+    align-content: center;
+}
+#svsuedu-image{
+    grid-area: svsuedu-image;
+    align-content: center;
+    border-radius: var(--main-radius);
+    border: solid var(--button-color) var(--border-thickness);
+}
+#svsuedu-image img{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#svsuedu-text{
+    grid-area: svsuedu-text;
+    font-size: var(--second-big-text);
+    align-content: center;
+}
+
+/* --------------- End Education Section --------------- */
+
+
+/* --------------- Experience Section --------------- */
+
+#experience-page{
+    grid-template-areas:
+    "experience-section-header experience-section-header experience-section-header"
+    ". experience-items ."
+    ;
+
+    grid-template-columns: 0.001fr 4fr 0.001fr;
+    grid-template-rows: 0.75fr 4fr;
+}
+#experience-section-header{
+    grid-area: experience-section-header;
+
+    font-size: var(--biggest-text);
+}
+#experience-items{
+    grid-area: experience-items;
+    display: flex;
+    align-content: center;
+}
+#mid-experience{
+    flex-basis: 50%;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+#mid-experience img{
+    width: clamp(5vw, 15vh + 5vw, 70vw);
+}
+#bishop-experience{
+    flex-basis: 50%;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+#bishop-experience img{
+    width: clamp(5vw, 15vh + 5vw, 70vw);
+}
+#mid-list{
+    align-content: center;
+}
+#bishop-list{
+    align-content: center;
+}
+/* --------------- End Experience Section --------------- */
+
+
+/* --------------- References Section --------------- */ 
+#references-page{
+    grid-template-areas:
+    "references-section-header references-section-header references-section-header"
+    ". references-items ."
+    "footer footer footer"
+    ;
+
+    grid-template-columns: 0.001fr 4fr 0.001fr;
+    grid-template-rows: 0.75fr 3.25fr 0.75fr;
+}
+#references-section-header{
+    grid-area: references-section-header;
+
+    font-size: var(--biggest-text);
+}
+#references-items{
+    grid-area: references-items;
+
+    display: flex;
+    align-content: center;
+    line-height: 130%;
+}
+#reference1{
+    flex-basis: 33.3%;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+#reference2{
+    flex-basis: 33.3%;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+#reference3{
+    flex-basis: 33.3%;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+footer{
+    grid-area: footer;
+
+    display:flex;
+    padding: 1vh;
+}
+#contact-info{
+    color: var(--background-color);
+    flex-basis: 30%;
+    text-align: center;
+}
+#urls{
+    color: var(--background-color);
+    flex-basis: 70%;
+    align-content: center;
+}
+
+
+@media (max-width: 1060px) {
+
+    #landing-page{
+        grid-template-areas:
+        "nav nav nav nav"
+        ". headshot name ."
+        ". about-header about-header ."
+        ". about-text about-text ."
+        ;
+    
+        grid-template-columns: 0.001fr 1fr 3fr 0.001fr;
+        grid-template-rows: 1fr 2fr 1fr 2fr;
+    }
+    #headshot img{
+        width: 12vh;
+    }
+    .nav-button{
+        display: none;
+    }
+    #nav-name{
+        flex-basis: 80%;
+        text-align: center;
+        font-size: var(--big-text);
+    }
+    #hamburger-button{
+        align-content: center;
+         display: block;
+    }
+    #hamburger-button-image{
+       
+        width: 10vw;
+        height: 10vw;
+        flex-basis: 10%;
+    }
+
+    #project-page{
+        display: flex;
+        flex-direction: column;
+    }
+    #project-section-header{
+        flex-basis: 16%;
+    }
+    #project1-image{
+        display: none;
+    }
+    #project1-text{
+        flex-basis: 28%;
+    }
+    #project2-image{
+        display: none;
+    }
+    #project2-text{
+        flex-basis: 28%;
+    }
+    #project3-image{
+        display: none;
+    }
+    #project3-text{
+        flex-basis: 28%;
+    }
+
+
+    #education-page{
+    grid-template-areas:
+    "education-section-header education-section-header education-section-header"
+    ". midedu-text ."
+    ". svsuedu-text ."
+    ;
+
+    grid-template-columns: 0.001fr 4fr 0.001fr;
+    grid-template-rows: 0.75fr 2fr 2fr;
+}
+    #midedu-image{
+        display: none;
+    }
+    #svsuedu-image{
+        display: none;
+    }
+
+    #experience-items{
+    display: flex;
+    flex-direction: column;
+    }
+    #mid-experience{
+        border: var(--button-color) var(--border-thickness) solid;
+    }
+    #bishop-experience{
+        border: var(--button-color) var(--border-thickness) solid;
+    }
+
+    #references-items{
+        display: flex;
+        flex-direction: column;
+        line-height: 100%;
+    }
+    #reference1{
+        border: var(--button-color) var(--border-thickness) solid;
+    }
+    #reference2{
+        border: var(--button-color) var(--border-thickness) solid;
+    }
+    #reference3{
+        border: var(--button-color) var(--border-thickness) solid;
+    }
+}
